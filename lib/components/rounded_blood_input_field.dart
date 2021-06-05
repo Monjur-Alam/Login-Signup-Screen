@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/components/text_field_container.dart';
 import 'package:flutter_auth/utils/constants.dart';
 
-class RoundedInputField extends StatelessWidget {
+class RoundedBloodInputField extends StatelessWidget {
   final String hintText;
   final ValueChanged<String> onChanged;
 
-  const RoundedInputField({Key key,this.hintText, this.onChanged}):super(key: key);
+  const RoundedBloodInputField({Key key,this.hintText, this.onChanged}):super(key: key);
 
 
   @override
@@ -17,7 +17,7 @@ class RoundedInputField extends StatelessWidget {
         onChanged: onChanged,
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
-          icon: Icon(Icons.home_repair_service,color: kPrimaryColor,),
+          icon: Icon(Icons.bloodtype,color: kPrimaryColor,),
           hintText: hintText,
           border: InputBorder.none,
         ),

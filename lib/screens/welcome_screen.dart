@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
-import 'package:flutter_auth/screens/signup_screen.dart';
+import 'package:flutter_auth/screens/deshboard.dart';
+import 'package:flutter_auth/screens/signup_student_screen.dart';
+import 'package:flutter_auth/screens/signup_teacher_screen.dart';
 import 'package:flutter_auth/utils/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -32,6 +34,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  SizedBox(height: 50),
                   Text(
                     "Welcome to Edu!",
                     style: TextStyle(
@@ -55,16 +58,28 @@ class WelcomeScreen extends StatelessWidget {
                     },
                   ),
                   RoundedButton(
-                    text: "SIGN UP",
+                    text: "SIGN UP as TEACHER",
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: () {
                       // ignore: missing_return
                       Navigator.push(context, MaterialPageRoute(builder: (context) {
-                        return SignUpScreen();
+                        return SignUpTeacherScreen();
                       }));
                     },
-                  )
+                  ),
+                  RoundedButton(
+                    text: "SIGN UP as STUDENT",
+                    color: kPrimaryColor,
+                    textColor: Colors.white,
+                    press: () {
+                      // ignore: missing_return
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return SignUpStudentScreen();
+                      }));
+                    },
+                  ),
+                  SizedBox(height: 50),
                 ],
               ),
             )
