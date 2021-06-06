@@ -74,7 +74,7 @@ class _SignUpScreenState extends State<SignUpTeacherScreen> {
                   ),
                   SizedBox(height: 10),
                   RoundedNameInputField(
-                    hintText: "Student Name",
+                    hintText: "Teacher Name",
                     onChanged: (value) {
                       name = value;
                     },
@@ -151,11 +151,13 @@ class _SignUpScreenState extends State<SignUpTeacherScreen> {
                                   FlatButton(
                                     child: Text('Ok'),
                                     onPressed: () {
-                                      Navigator.push(context,
-                                          MaterialPageRoute(
-                                              builder: (context) {
-                                                return Dashboard();
-                                              }));
+                                      Navigator.pushAndRemoveUntil(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (BuildContext context) => Dashboard(),
+                                        ),
+                                            (route) => false,
+                                      );
                                     },
                                   )
                                 ],
@@ -186,10 +188,13 @@ class _SignUpScreenState extends State<SignUpTeacherScreen> {
                   SizedBox(height: size.height * 0.03),
                   AlreadyHaveAnAccountCheck(
                     press: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                            return WelcomeScreen();
-                          }));
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => WelcomeScreen(),
+                        ),
+                            (route) => false,
+                      );
                     },
                     login: false,
                   ),

@@ -7,6 +7,7 @@ import 'package:flutter_auth/utils/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'login_screen.dart';
+
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -36,23 +37,25 @@ class WelcomeScreen extends StatelessWidget {
                 children: <Widget>[
                   SizedBox(height: 50),
                   Text(
-                    "Welcome to Edu!",
+                    "Sonargaon University",
                     style: TextStyle(
-                      fontSize: 30.0,
-                      fontWeight: FontWeight.bold,
-                      foreground: Paint()..shader = linearGradient
-                    ),
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.bold,
+                        foreground: Paint()..shader = linearGradient),
                   ),
                   SizedBox(height: size.height * 0.05),
-                  SvgPicture.asset("assets/icons/chat.svg",
-                  height: size.height * 0.45,),
+                  SvgPicture.asset(
+                    "assets/icons/chat.svg",
+                    height: size.height * 0.35,
+                  ),
                   SizedBox(height: size.height * 0.05),
                   RoundedButton(
                     text: "LOGIN",
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return LoginScreen();
                       }));
                     },
@@ -63,7 +66,8 @@ class WelcomeScreen extends StatelessWidget {
                     textColor: Colors.white,
                     press: () {
                       // ignore: missing_return
-                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return SignUpTeacherScreen();
                       }));
                     },
@@ -74,7 +78,8 @@ class WelcomeScreen extends StatelessWidget {
                     textColor: Colors.white,
                     press: () {
                       // ignore: missing_return
-                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return SignUpStudentScreen();
                       }));
                     },

@@ -87,8 +87,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         Map data = jsonDecode(response.body);
                         String msg = data['msg'];
                         if (msg != 'credentials not match') {
-                          // SharedPreferences prefs = await SharedPreferences.getInstance();
-                          // prefs?.setString("mobile", mobile);
+                          SharedPreferences prefs = await SharedPreferences.getInstance();
+                          prefs?.setString("mobile", mobile);
                           showDialog(
                               context: context,
                               builder: (_) => AlertDialog(
@@ -98,11 +98,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                   FlatButton(
                                     child: Text('Ok'),
                                     onPressed: () {
-                                      Navigator.push(context,
-                                          MaterialPageRoute(
-                                              builder: (context) {
-                                                return Dashboard();
-                                              }));
+                                      Navigator.pushAndRemoveUntil(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (BuildContext context) => Dashboard(),
+                                        ),
+                                            (route) => false,
+                                      );
                                     },
                                   )
                                 ],

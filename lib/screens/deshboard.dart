@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
+import 'package:flutter_auth/screens/login_screen.dart';
 import 'package:flutter_auth/screens/prosason.dart';
 import 'package:flutter_auth/screens/student_department.dart';
 import 'package:flutter_auth/screens/teacher_department.dart';
 import 'package:flutter_auth/utils/constants.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key key}) : super(key: key);
@@ -13,7 +15,7 @@ class Dashboard extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sonargaon University'),
+        title: Center(child: Text('Sonargaon University')),
       ),
       body: Container(
         height: size.height,
@@ -42,45 +44,70 @@ class Dashboard extends StatelessWidget {
                     text: "TEACHER LIST",
                     color: kPrimaryColor,
                     textColor: Colors.white,
-                    press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return TeacherDepartment();
-                              }
-                          )
-                      );
+                    press: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return TeacherDepartment();
+                      }));
                     },
                   ),
                   RoundedButton(
                     text: "STUDENT LIST",
                     color: kPrimaryColor,
                     textColor: Colors.white,
-                    press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return StudentDepartment();
-                              }
-                          )
-                      );
+                    press: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return StudentDepartment();
+                      }));
                     },
                   ),
                   RoundedButton(
                     text: "PROSASON",
                     color: kPrimaryColor,
                     textColor: Colors.white,
-                    press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return Prosason();
-                              }
-                          )
-                      );
+                    press: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return Prosason();
+                      }));
+                    },
+                  ),
+                  RoundedButton(
+                    text: "LOG OUT",
+                    color: kPrimaryColor,
+                    textColor: Colors.white,
+                    press: () {
+                      showDialog(
+                          context: context,
+                          builder: (_) => AlertDialog(
+                                title: Text('Logout'),
+                                content: Text('Are you sure want logout?'),
+                                actions: [
+                                  FlatButton(
+                                    child: Text('No'),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                  ),
+                                  FlatButton(
+                                    child: Text('Yes'),
+                                    onPressed: () async {
+                                      final prefs =
+                                          await SharedPreferences.getInstance();
+                                      prefs.remove('mobile');
+                                      Navigator.pushAndRemoveUntil(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              LoginScreen(),
+                                        ),
+                                        (route) => false,
+                                      );
+                                    },
+                                  ),
+                                ],
+                              ));
                     },
                   ),
                   SizedBox(height: size.height * 0.03)
