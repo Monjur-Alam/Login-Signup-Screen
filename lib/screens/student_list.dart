@@ -25,9 +25,10 @@ class _TeacherListState extends State<StudentList> {
 
   @override
   Widget build(BuildContext context) {
+    final  Map<String, Object> dep = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
-        title: Text('TEACHERS LIST'),
+        title: Text('STUDENT LIST'),
       ),
       body: Container(
         child: FutureBuilder<List<dynamic>>(
@@ -38,17 +39,22 @@ class _TeacherListState extends State<StudentList> {
                   padding: EdgeInsets.all(8),
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      child: Column(
-                        children: <Widget>[
-                          ListTile(
-                            title: Text(snapshot.data[index]['name']),
-                            subtitle: Text(snapshot.data[index]['mobile']),
-                            trailing: Text(snapshot.data[index]['blood'])
-                          )
-                        ],
-                      ),
-                    );
+                    print(snapshot.data[index]['dep']);
+                    if (snapshot.data[index]['dep'] == dep['dep']) {
+                      return Card(
+                        child: Column(
+                          children: <Widget>[
+                            ListTile(
+                                title: Text('Name: ' + snapshot.data[index]['name']),
+                                subtitle: Text('Mobile: ' + snapshot.data[index]['mobile'] + '\n' 'FB: ' + snapshot.data[index]['fb']),
+                                trailing: Text(snapshot.data[index]['blood'])
+                            )
+                          ],
+                        ),
+                      );
+                    } else {
+                      return SizedBox(height: 0,);
+                    }
                   });
             } else {
               return Center(child: CircularProgressIndicator());

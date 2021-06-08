@@ -25,6 +25,7 @@ class _TeacherListState extends State<TeacherList> {
 
   @override
   Widget build(BuildContext context) {
+    final  Map<String, Object> dep = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text('TEACHERS LIST'),
@@ -38,17 +39,22 @@ class _TeacherListState extends State<TeacherList> {
                   padding: EdgeInsets.all(8),
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      child: Column(
-                        children: <Widget>[
-                          ListTile(
-                            title: Text(snapshot.data[index]['name']),
-                            subtitle: Text(snapshot.data[index]['mobile']),
-                            trailing: Text(snapshot.data[index]['blood'])
-                          )
-                        ],
-                      ),
-                    );
+                    if (snapshot.data[index]['dep'] == dep['dep']) {
+                      print(dep['dep']);
+                      return Card(
+                        child: Column(
+                          children: <Widget>[
+                            ListTile(
+                                title: Text(snapshot.data[index]['name']),
+                                subtitle: Text('Mobile: ' + snapshot.data[index]['mobile'] + '\n' 'FB: ' + snapshot.data[index]['fb']),
+                                trailing: Text(snapshot.data[index]['blood'])
+                            )
+                          ],
+                        ),
+                      );
+                    } else {
+                      return SizedBox(height: 0,);
+                    }
                   });
             } else {
               return Center(child: CircularProgressIndicator());

@@ -42,14 +42,8 @@ class StudentDepartment extends StatelessWidget {
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return StudentList();
-                              }
-                          )
-                      );
+                      Navigator.pushNamed(context, 'student_list',
+                          arguments: {"dep": "LAW"});
                     },
                   ),
                   RoundedButton(
@@ -57,14 +51,8 @@ class StudentDepartment extends StatelessWidget {
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return StudentList();
-                              }
-                          )
-                      );
+                      Navigator.pushNamed(context, 'student_list',
+                          arguments: {"dep": "CIVIL ENGINEERING"});
                     },
                   ),
                   RoundedButton(
@@ -72,14 +60,8 @@ class StudentDepartment extends StatelessWidget {
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return StudentList();
-                              }
-                          )
-                      );
+                      Navigator.pushNamed(context, 'student_list',
+                          arguments: {"dep": "MECHANICAL ENGINEERING"});
                     },
                   ),
                   RoundedButton(
@@ -87,14 +69,8 @@ class StudentDepartment extends StatelessWidget {
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return StudentList();
-                              }
-                          )
-                      );
+                      Navigator.pushNamed(context, 'student_list',
+                          arguments: {"dep": "CSE"});
                     },
                   ),
                   RoundedButton(
@@ -102,14 +78,8 @@ class StudentDepartment extends StatelessWidget {
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return StudentList();
-                              }
-                          )
-                      );
+                      Navigator.pushNamed(context, 'student_list',
+                          arguments: {"dep": "ARCHITECTURE"});
                     },
                   ),
                   SizedBox(height: size.height * 0.03)

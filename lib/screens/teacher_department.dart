@@ -40,75 +40,45 @@ class TeacherDepartment extends StatelessWidget {
                     text: "LAW",
                     color: kPrimaryColor,
                     textColor: Colors.white,
-                    press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return TeacherList();
-                              }
-                          )
-                      );
+                    press: () {
+                      Navigator.pushNamed(context, 'teacher_list',
+                          arguments: {"dep": "LAW"});
                     },
                   ),
                   RoundedButton(
                     text: "CIVIL ENGINEERING",
                     color: kPrimaryColor,
                     textColor: Colors.white,
-                    press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return TeacherList();
-                              }
-                          )
-                      );
+                    press: () {
+                      Navigator.pushNamed(context, 'teacher_list',
+                          arguments: {"dep": "CIVIL ENGINEERING"});
                     },
                   ),
                   RoundedButton(
                     text: "MECHANICAL ENGINEERING",
                     color: kPrimaryColor,
                     textColor: Colors.white,
-                    press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return TeacherList();
-                              }
-                          )
-                      );
+                    press: () {
+                      Navigator.pushNamed(context, 'teacher_list',
+                          arguments: {"dep": "MECHANICAL ENGINEERING"});
                     },
                   ),
                   RoundedButton(
                     text: "CSE",
                     color: kPrimaryColor,
                     textColor: Colors.white,
-                    press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return TeacherList();
-                              }
-                          )
-                      );
+                    press: () {
+                      Navigator.pushNamed(context, 'teacher_list',
+                          arguments: {"dep": "CSE"});
                     },
                   ),
                   RoundedButton(
                     text: "ARCHITECTURE",
                     color: kPrimaryColor,
                     textColor: Colors.white,
-                    press: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context){
-                                return TeacherList();
-                              }
-                          )
-                      );
+                    press: () {
+                      Navigator.pushNamed(context, 'teacher_list',
+                          arguments: {"dep": "ARCHITECTURE"});
                     },
                   ),
                   SizedBox(height: size.height * 0.03)

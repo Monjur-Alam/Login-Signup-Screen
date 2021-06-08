@@ -17,6 +17,7 @@ import 'package:flutter_auth/screens/welcome_screen.dart';
 import 'package:flutter_auth/utils/constants.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SignUpTeacherScreen extends StatefulWidget {
   @override
@@ -142,6 +143,8 @@ class _SignUpScreenState extends State<SignUpTeacherScreen> {
                         Map data = jsonDecode(response.body);
                         String msg = data['msg'];
                         if (msg == 'inserted') {
+                          SharedPreferences prefs = await SharedPreferences.getInstance();
+                          prefs?.setString("mobile", mobile);
                           showDialog(
                               context: context,
                               builder: (_) => AlertDialog(
