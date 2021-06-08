@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
+import 'package:flutter_auth/screens/WebViewExample.dart';
 import 'package:flutter_auth/screens/login_screen.dart';
 import 'package:flutter_auth/screens/prosason.dart';
 import 'package:flutter_auth/screens/student_department.dart';
@@ -74,6 +75,17 @@ class Dashboard extends StatelessWidget {
                     },
                   ),
                   RoundedButton(
+                    text: "SONARGAON ERP",
+                    color: kPrimaryColor,
+                    textColor: Colors.white,
+                    press: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return WebViewExample();
+                      }));
+                    },
+                  ),
+                  RoundedButton(
                     text: "LOG OUT",
                     color: kPrimaryColor,
                     textColor: Colors.white,
@@ -82,7 +94,7 @@ class Dashboard extends StatelessWidget {
                           context: context,
                           builder: (_) => AlertDialog(
                                 title: Text('Logout'),
-                                content: Text('Are you sure want logout?'),
+                                content: Text('Are you sure want to logout?'),
                                 actions: [
                                   FlatButton(
                                     child: Text('No'),

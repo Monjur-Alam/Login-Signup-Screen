@@ -2,7 +2,7 @@
     package="com.punith.flutter_auth">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="flutter_auth"
+        android:label="SU Community"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
