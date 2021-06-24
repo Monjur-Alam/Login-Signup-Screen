@@ -139,7 +139,7 @@ class _SignUpScreenState extends State<SignUpTeacherScreen> {
                       final dataModel = DataModel(name, dep, mobile,
                           blood, fb, identity, status, password);
                       try {
-                        Response response = await post(Uri.parse('https://parcel.airposted.com/api/registers'), body: dataModel.toJson());
+                        Response response = await post(Uri.parse('https://razipublications.org/api/registers'), body: dataModel.toJson());
                         Map data = jsonDecode(response.body);
                         String msg = data['msg'];
                         if (msg == 'inserted') {

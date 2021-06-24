@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     press: () async {
                       final model = Model(mobile, password);
                       try {
-                        Response response = await post(Uri.parse('https://parcel.airposted.com/api/logins'), body: model.toJson());
+                        Response response = await post(Uri.parse('https://razipublications.org/api/logins'), body: model.toJson());
                         Map data = jsonDecode(response.body);
                         String msg = data['msg'];
                         if (msg != 'credentials not match') {

@@ -16,7 +16,7 @@ class _TeacherListState extends State<TeacherList> {
     super.initState();
   }
 
-  final String apiUrl = "https://parcel.airposted.com/api/userlists2";
+  final String apiUrl = "https://razipublications.org/api/userlists2";
 
   Future<List<dynamic>> fetchUsers() async {
     var result = await http.get(Uri.parse(apiUrl));
