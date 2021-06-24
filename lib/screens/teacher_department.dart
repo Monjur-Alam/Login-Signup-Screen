@@ -50,8 +50,9 @@ class TeacherDepartment extends StatelessWidget {
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: () {
-                      Navigator.pushNamed(context, 'teacher_list',
-                          arguments: {"dep": "CIVIL ENGINEERING"});
+                    Navigator.pushNamed(context, 'teacher_list',
+                        arguments: {"dep": "CIVIL ENGINEERING",
+                          "code": "101"});
                     },
                   ),
                   RoundedButton(
