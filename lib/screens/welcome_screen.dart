@@ -43,10 +43,13 @@ class WelcomeScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         foreground: Paint()..shader = linearGradient),
                   ),
-                  SizedBox(height: size.height * 0.05),
-                  SvgPicture.asset(
-                    "assets/icons/chat.svg",
-                    height: size.height * 0.35,
+                  SizedBox(height: 15),
+                  SizedBox(
+                    height: 200,
+                    width: 200,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/universiry.jpeg"),
+                    ),
                   ),
                   SizedBox(height: size.height * 0.05),
                   RoundedButton(

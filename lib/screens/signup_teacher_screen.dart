@@ -68,10 +68,13 @@ class _SignUpScreenState extends State<SignUpTeacherScreen> {
                         fontSize: 25.0,
                         foreground: Paint()..shader = linearGradient),
                   ),
-                  SizedBox(height: 10),
-                  SvgPicture.asset(
-                    "assets/images/signup.svg",
-                    height: size.height * 0.25,
+                  SizedBox(height: 15),
+                  SizedBox(
+                    height: 200,
+                    width: 200,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/group.jpeg"),
+                    ),
                   ),
                   SizedBox(height: 10),
                   RoundedNameInputField(

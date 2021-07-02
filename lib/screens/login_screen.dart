@@ -56,13 +56,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     "Login",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0,
+                        fontSize: 26.0,
                         foreground: Paint()..shader = linearGradient),
                   ),
-                  SizedBox(height: 10),
-                  SvgPicture.asset(
-                    "assets/images/login.svg",
-                    height: size.height * 0.25,
+                  SizedBox(height: 15),
+                  SizedBox(
+                    height: 200,
+                    width: 200,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/universiry.jpeg"),
+                    ),
                   ),
                   SizedBox(height: 10),
                   RoundedMobileInputField(
