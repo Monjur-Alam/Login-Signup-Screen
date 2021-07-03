@@ -12,6 +12,7 @@ Future<void> main() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   var mobile = prefs.getString('mobile');
   runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
       routes: {
         'teacher_list': (context) => TeacherList(),
         'student_list': (context) => StudentList(),
