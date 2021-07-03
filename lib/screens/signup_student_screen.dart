@@ -73,7 +73,7 @@ class _SignUpScreenState extends State<SignUpStudentScreen> {
                           height: 200,
                           width: 200,
                           child: CircleAvatar(
-                            backgroundImage: AssetImage("assets/images/group.jpeg"),
+                            backgroundImage: AssetImage("assets/images/student_group.jpeg"),
                           ),
                         ),
                         SizedBox(height: 10),

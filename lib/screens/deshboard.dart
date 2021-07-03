@@ -64,7 +64,7 @@ class Dashboard extends StatelessWidget {
                     },
                   ),
                   RoundedButton(
-                    text: "PROSASON",
+                    text: "ADMINISTRATION",
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: () {
