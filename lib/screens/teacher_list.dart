@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TeacherList extends StatefulWidget {
   const TeacherList({Key key}) : super(key: key);
@@ -39,6 +40,7 @@ class _TeacherListState extends State<TeacherList> {
                   padding: EdgeInsets.all(8),
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index) {
+                    var mobile = snapshot.data[index]['mobile'];
                     if (snapshot.data[index]['dep'] == dep['dep']) {
                       print(dep['dep']);
                       return Card(
@@ -47,7 +49,10 @@ class _TeacherListState extends State<TeacherList> {
                             ListTile(
                                 title: Text(snapshot.data[index]['name']),
                                 subtitle: Text('Mobile: ' + snapshot.data[index]['mobile'] + '\n' 'FB: ' + snapshot.data[index]['fb']),
-                                trailing: Text(snapshot.data[index]['blood'])
+                                trailing: Text(snapshot.data[index]['blood']),
+                              onTap: () {
+                                launch(('tel://$mobile'));
+                              },
                             )
                           ],
                         ),

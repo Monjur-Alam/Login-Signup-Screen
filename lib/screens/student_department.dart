@@ -38,12 +38,12 @@ class StudentDepartment extends StatelessWidget {
                 children: <Widget>[
                   SizedBox(height: 10),
                   RoundedButton(
-                    text: "LAW",
+                    text: "ARCHITECTURE",
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: (){
                       Navigator.pushNamed(context, 'student_list',
-                          arguments: {"dep": "LAW"});
+                          arguments: {"dep": "ARCHITECTURE"});
                     },
                   ),
                   RoundedButton(
@@ -56,15 +56,6 @@ class StudentDepartment extends StatelessWidget {
                     },
                   ),
                   RoundedButton(
-                    text: "MECHANICAL ENGINEERING",
-                    color: kPrimaryColor,
-                    textColor: Colors.white,
-                    press: (){
-                      Navigator.pushNamed(context, 'student_list',
-                          arguments: {"dep": "MECHANICAL ENGINEERING"});
-                    },
-                  ),
-                  RoundedButton(
                     text: "CSE",
                     color: kPrimaryColor,
                     textColor: Colors.white,
@@ -74,12 +65,21 @@ class StudentDepartment extends StatelessWidget {
                     },
                   ),
                   RoundedButton(
-                    text: "ARCHITECTURE",
+                    text: "LAW",
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: (){
                       Navigator.pushNamed(context, 'student_list',
-                          arguments: {"dep": "ARCHITECTURE"});
+                          arguments: {"dep": "LAW"});
+                    },
+                  ),
+                  RoundedButton(
+                    text: "MECHANICAL ENGINEERING",
+                    color: kPrimaryColor,
+                    textColor: Colors.white,
+                    press: (){
+                      Navigator.pushNamed(context, 'student_list',
+                          arguments: {"dep": "MECHANICAL ENGINEERING"});
                     },
                   ),
                   SizedBox(height: size.height * 0.03)

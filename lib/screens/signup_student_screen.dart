@@ -39,126 +39,140 @@ class _SignUpScreenState extends State<SignUpStudentScreen> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-              height: size.height,
-              width: double.infinity,
-              child: Stack(
-                alignment: Alignment.center,
+        height: size.height,
+        width: double.infinity,
+        child: Stack(
+          alignment: Alignment.center,
+          children: <Widget>[
+            Positioned(
+              top: 0,
+              left: 0,
+              child: Image.asset("assets/images/signup_top.png"),
+              width: size.width * 0.35,
+            ),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              child: Image.asset("assets/images/main_bottom.png"),
+              width: size.width * 0.23,
+            ),
+            SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Positioned(
-                    top: 0,
-                    left: 0,
-                    child: Image.asset("assets/images/signup_top.png"),
-                    width: size.width * 0.35,
+                  SizedBox(height: 50),
+                  Text(
+                    "SignUp",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25.0,
+                        foreground: Paint()..shader = linearGradient),
                   ),
-                  Positioned(
-                    bottom: 0,
-                    left: 0,
-                    child: Image.asset("assets/images/main_bottom.png"),
-                    width: size.width * 0.23,
+                  SizedBox(height: 15),
+                  SizedBox(
+                    height: 200,
+                    width: 200,
+                    child: CircleAvatar(
+                      backgroundImage:
+                          AssetImage("assets/images/student_group.jpeg"),
+                    ),
                   ),
-                  SingleChildScrollView(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        SizedBox(height: 50),
-                        Text(
-                          "SignUp",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25.0,
-                              foreground: Paint()..shader = linearGradient),
-                        ),
-                        SizedBox(height: 15),
-                        SizedBox(
-                          height: 200,
-                          width: 200,
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage("assets/images/student_group.jpeg"),
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        RoundedNameInputField(
-                          hintText: "Student Name",
-                          onChanged: (value) {
-                            name = value;
-                          },
-                        ),
-                        RoundedInputField(
-                          hintText: "Student ID",
-                          onChanged: (value) {
-                            identity = value;
-                          },
-                        ),
-                        DropdownButton<String>(
-                          value: dep,
-                          icon: const Icon(Icons.arrow_downward),
-                          iconSize: 24,
-                          elevation: 16,
-                          style: const TextStyle(color: Colors.deepPurple),
-                          underline: Container(
-                            height: 3,
-                            color: Colors.deepPurpleAccent,
-                          ),
-                          onChanged: (String newValue) {
-                            setState(() {
-                              dep = newValue;
-                            });
-                          },
-                          items: <String>[
-                            'MECHANICAL ENGINEERING',
-                            'CIVIL ENGINEERING',
-                            'ARCHITECTURE',
-                            'LAW',
-                            'CSE'
-                          ].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Text(value),
-                            );
-                          }).toList(),
-                        ),
-                        RoundedBloodInputField(
-                          hintText: "Blood Group",
-                          onChanged: (value) {
-                            blood = value;
-                          },
-                        ),
-                        RoundedFbInputField(
-                          hintText: "Facebook Link",
-                          onChanged: (value) {
-                            fb = value;
-                          },
-                        ),
-                        RoundedMobileInputField(
-                          hintText: "Mobile",
-                          onChanged: (value) {
-                            mobile = value;
-                          },
-                        ),
-                        RoundedPasswordFiled(
-                          onChanged: (value) {
-                            password = value;
-                          },
-                        ),
-                        RoundedButton(
-                          text: "SIGN UP",
-                          color: kPrimaryColor,
-                          textColor: Colors.white,
-                          press: () async {
-                            final dataModel = DataModel(name, dep, mobile,
-                                blood, fb, identity, status, password);
-                            try {
-                              Response response = await post(Uri.parse('https://razipublications.org/api/registers'), body: dataModel.toJson());
-                              Map data = jsonDecode(response.body);
-                              String msg = data['msg'];
-                              if (msg == 'inserted') {
-                                SharedPreferences prefs = await SharedPreferences.getInstance();
-                                prefs?.setString("mobile", mobile);
-                                showDialog(
-                                    context: context,
-                                    builder: (_) => AlertDialog(
+                  SizedBox(height: 10),
+                  RoundedNameInputField(
+                    hintText: "Student Name",
+                    onChanged: (value) {
+                      name = value;
+                    },
+                  ),
+                  RoundedInputField(
+                    hintText: "Student ID",
+                    onChanged: (value) {
+                      identity = value;
+                    },
+                  ),
+                  DropdownButton<String>(
+                    value: dep,
+                    icon: const Icon(Icons.arrow_downward),
+                    iconSize: 24,
+                    elevation: 16,
+                    style: const TextStyle(color: Colors.deepPurple),
+                    underline: Container(
+                      height: 3,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                    onChanged: (String newValue) {
+                      setState(() {
+                        dep = newValue;
+                      });
+                    },
+                    items: <String>[
+                      'MECHANICAL ENGINEERING',
+                      'CIVIL ENGINEERING',
+                      'ARCHITECTURE',
+                      'LAW',
+                      'CSE'
+                    ].map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
+                  RoundedBloodInputField(
+                    hintText: "Blood Group",
+                    onChanged: (value) {
+                      blood = value;
+                    },
+                  ),
+                  RoundedFbInputField(
+                    hintText: "Facebook Link",
+                    onChanged: (value) {
+                      fb = value;
+                    },
+                  ),
+                  RoundedMobileInputField(
+                    hintText: "Mobile",
+                    onChanged: (value) {
+                      mobile = value;
+                    },
+                  ),
+                  RoundedPasswordFiled(
+                    onChanged: (value) {
+                      password = value;
+                    },
+                  ),
+                  RoundedButton(
+                    text: "SIGN UP",
+                    color: kPrimaryColor,
+                    textColor: Colors.white,
+                    press: () async {
+                      print(name);
+                      if (name != null &&
+                          identity != null &&
+                          dep != null &&
+                          blood != null &&
+                          fb != null &&
+                          mobile != null &&
+                          password != null) {
+                        final dataModel = DataModel(name, dep, mobile, blood,
+                            fb, identity, status, password);
+                        try {
+                          Response response = await post(
+                              Uri.parse(
+                                  'https://razipublications.org/api/registers'),
+                              body: dataModel.toJson());
+                          Map data = jsonDecode(response.body);
+                          String msg = data['msg'];
+                          if (msg == 'inserted') {
+                            SharedPreferences prefs =
+                                await SharedPreferences.getInstance();
+                            prefs?.setString("mobile", mobile);
+                            showDialog(
+                                context: context,
+                                builder: (_) => AlertDialog(
                                       title: Text('Successful'),
-                                      content: Text('Create Account Successfully'),
+                                      content:
+                                          Text('Create Account Successfully'),
                                       actions: [
                                         FlatButton(
                                           child: Text('Ok'),
@@ -166,23 +180,24 @@ class _SignUpScreenState extends State<SignUpStudentScreen> {
                                             Navigator.pushAndRemoveUntil(
                                               context,
                                               MaterialPageRoute(
-                                                builder: (BuildContext context) => Dashboard(),
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        Dashboard(),
                                               ),
-                                                  (route) => false,
+                                              (route) => false,
                                             );
                                           },
                                         )
                                       ],
                                     ));
-                              }
-                            }
-                            catch (e){
-                              print('Caught error: $e');
-                              final title = 'Fail';
-                              final text = e;
-                              showDialog(
-                                  context: context,
-                                  builder: (_) => AlertDialog(
+                          }
+                        } catch (e) {
+                          print('Caught error: $e');
+                          final title = 'Fail';
+                          final text = e;
+                          showDialog(
+                              context: context,
+                              builder: (_) => AlertDialog(
                                     title: Text(title),
                                     content: Text(text),
                                     actions: [
@@ -194,47 +209,65 @@ class _SignUpScreenState extends State<SignUpStudentScreen> {
                                       )
                                     ],
                                   ));
-                            }
-                          },
+                        }
+                      }
+                      else {
+                        showDialog(
+                            context: context,
+                            builder: (_) => AlertDialog(
+                              title: Text('Empty Field'),
+                              content:
+                              Text('All Input Field Required'),
+                              actions: [
+                                FlatButton(
+                                  child: Text('Ok'),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                )
+                              ],
+                            ));
+                      }
+                    },
+                  ),
+                  SizedBox(height: size.height * 0.03),
+                  AlreadyHaveAnAccountCheck(
+                    press: () {
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => WelcomeScreen(),
                         ),
-                        SizedBox(height: size.height * 0.03),
-                        AlreadyHaveAnAccountCheck(
-                          press: () {
-                            Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => WelcomeScreen(),
-                              ),
-                                  (route) => false,
-                            );
-                          },
-                          login: false,
-                        ),
-                        OrDivider(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            SocialIcon(
-                              iconSrc: "assets/icons/facebook.svg",
-                              press: () {},
-                            ),
-                            SocialIcon(
-                              iconSrc: "assets/icons/twitter.svg",
-                              press: () {},
-                            ),
-                            SocialIcon(
-                              iconSrc: "assets/icons/google-plus.svg",
-                              press: () {},
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 30),
-                      ],
-                    ),
-                  )
+                        (route) => false,
+                      );
+                    },
+                    login: false,
+                  ),
+                  OrDivider(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SocialIcon(
+                        iconSrc: "assets/icons/facebook.svg",
+                        press: () {},
+                      ),
+                      SocialIcon(
+                        iconSrc: "assets/icons/twitter.svg",
+                        press: () {},
+                      ),
+                      SocialIcon(
+                        iconSrc: "assets/icons/google-plus.svg",
+                        press: () {},
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 30),
                 ],
               ),
-            ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

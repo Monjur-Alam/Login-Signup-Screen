@@ -139,46 +139,77 @@ class _SignUpScreenState extends State<SignUpTeacherScreen> {
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: () async {
-                      final dataModel = DataModel(name, dep, mobile,
-                          blood, fb, identity, status, password);
-                      try {
-                        Response response = await post(Uri.parse('https://razipublications.org/api/registers'), body: dataModel.toJson());
-                        Map data = jsonDecode(response.body);
-                        String msg = data['msg'];
-                        if (msg == 'inserted') {
-                          SharedPreferences prefs = await SharedPreferences.getInstance();
-                          prefs?.setString("mobile", mobile);
+                      if (name != null &&
+                          identity != null &&
+                          dep != null &&
+                          blood != null &&
+                          fb != null &&
+                          mobile != null &&
+                          password != null) {
+                        final dataModel = DataModel(name, dep, mobile, blood,
+                            fb, identity, status, password);
+                        try {
+                          Response response = await post(
+                              Uri.parse(
+                                  'https://razipublications.org/api/registers'),
+                              body: dataModel.toJson());
+                          Map data = jsonDecode(response.body);
+                          String msg = data['msg'];
+                          if (msg == 'inserted') {
+                            SharedPreferences prefs =
+                                await SharedPreferences.getInstance();
+                            prefs?.setString("mobile", mobile);
+                            showDialog(
+                                context: context,
+                                builder: (_) => AlertDialog(
+                                      title: Text('Successful'),
+                                      content:
+                                          Text('Create Account Successfully'),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text('Ok'),
+                                          onPressed: () {
+                                            Navigator.pushAndRemoveUntil(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder:
+                                                    (BuildContext context) =>
+                                                        Dashboard(),
+                                              ),
+                                              (route) => false,
+                                            );
+                                          },
+                                        )
+                                      ],
+                                    ));
+                          }
+                        } catch (e) {
+                          print('Caught error: $e');
+                          final title = 'Fail';
+                          final text = e;
                           showDialog(
                               context: context,
                               builder: (_) => AlertDialog(
-                                title: Text('Successful'),
-                                content: Text('Create Account Successfully'),
-                                actions: [
-                                  FlatButton(
-                                    child: Text('Ok'),
-                                    onPressed: () {
-                                      Navigator.pushAndRemoveUntil(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (BuildContext context) => Dashboard(),
-                                        ),
-                                            (route) => false,
-                                      );
-                                    },
-                                  )
-                                ],
-                              ));
+                                    title: Text(title),
+                                    content: Text(text),
+                                    actions: [
+                                      FlatButton(
+                                        child: Text('Ok'),
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                      )
+                                    ],
+                                  ));
                         }
                       }
-                      catch (e){
-                        print('Caught error: $e');
-                        final title = 'Fail';
-                        final text = e;
+                      else {
                         showDialog(
                             context: context,
                             builder: (_) => AlertDialog(
-                              title: Text(title),
-                              content: Text(text),
+                              title: Text('Empty Field'),
+                              content:
+                              Text('All Input Field Required'),
                               actions: [
                                 FlatButton(
                                   child: Text('Ok'),
@@ -199,7 +230,7 @@ class _SignUpScreenState extends State<SignUpTeacherScreen> {
                         MaterialPageRoute(
                           builder: (BuildContext context) => WelcomeScreen(),
                         ),
-                            (route) => false,
+                        (route) => false,
                       );
                     },
                     login: false,

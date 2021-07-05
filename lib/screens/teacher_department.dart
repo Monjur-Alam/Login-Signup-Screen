@@ -37,12 +37,12 @@ class TeacherDepartment extends StatelessWidget {
                 children: <Widget>[
                   SizedBox(height: 10),
                   RoundedButton(
-                    text: "LAW",
+                    text: "ARCHITECTURE",
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: () {
                       Navigator.pushNamed(context, 'teacher_list',
-                          arguments: {"dep": "LAW"});
+                          arguments: {"dep": "ARCHITECTURE"});
                     },
                   ),
                   RoundedButton(
@@ -50,18 +50,9 @@ class TeacherDepartment extends StatelessWidget {
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: () {
-                    Navigator.pushNamed(context, 'teacher_list',
-                        arguments: {"dep": "CIVIL ENGINEERING",
-                          "code": "101"});
-                    },
-                  ),
-                  RoundedButton(
-                    text: "MECHANICAL ENGINEERING",
-                    color: kPrimaryColor,
-                    textColor: Colors.white,
-                    press: () {
                       Navigator.pushNamed(context, 'teacher_list',
-                          arguments: {"dep": "MECHANICAL ENGINEERING"});
+                          arguments: {"dep": "CIVIL ENGINEERING",
+                            "code": "101"});
                     },
                   ),
                   RoundedButton(
@@ -74,12 +65,21 @@ class TeacherDepartment extends StatelessWidget {
                     },
                   ),
                   RoundedButton(
-                    text: "ARCHITECTURE",
+                    text: "LAW",
                     color: kPrimaryColor,
                     textColor: Colors.white,
                     press: () {
                       Navigator.pushNamed(context, 'teacher_list',
-                          arguments: {"dep": "ARCHITECTURE"});
+                          arguments: {"dep": "LAW"});
+                    },
+                  ),
+                  RoundedButton(
+                    text: "MECHANICAL ENGINEERING",
+                    color: kPrimaryColor,
+                    textColor: Colors.white,
+                    press: () {
+                      Navigator.pushNamed(context, 'teacher_list',
+                          arguments: {"dep": "MECHANICAL ENGINEERING"});
                     },
                   ),
                   SizedBox(height: size.height * 0.03)

@@ -55,92 +55,6 @@ class Prosason extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Mahmudul Hoque',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 10,),
-                    Text(
-                      'PS to Vice Chancellor',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 2,),
-                    Text(
-                      'suvcoffice147@gmail.com',
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              color: kPrimaryColor,
-              padding: EdgeInsets.all(10.0),
-              child: Center(
-                child: Column(
-                  children: [
-                    Text(
-                      'Md.Zobayed Hossain',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 10,),
-                    Text(
-                      'APS to Vice Chancellor',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 2,),
-                    Text(
-                      'apstovcoofice@gmail.com',
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              color: kPrimaryColor,
-              padding: EdgeInsets.all(10.0),
-              child: Center(
-                child: Column(
-                  children: [
-                    Text(
                       'Abdul Gaffar Hirok',
                       style: TextStyle(
                         fontSize: 20.0,
@@ -195,7 +109,7 @@ class Prosason extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Mohammad Zakir Hossain',
+                      'Md. Fardoush Alam',
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
@@ -206,7 +120,7 @@ class Prosason extends StatelessWidget {
                     ),
                     SizedBox(height: 10,),
                     Text(
-                      'Admission Officer',
+                      'Assistant Executive',
                       style: TextStyle(
                         fontSize: 16.0,
                         fontWeight: FontWeight.normal,
@@ -217,7 +131,7 @@ class Prosason extends StatelessWidget {
                     ),
                     SizedBox(height: 2,),
                     Text(
-                      'zakir.su12@gmail.com',
+                      'ferdoushpak@gmail.com',
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.normal,
@@ -238,7 +152,7 @@ class Prosason extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Rasel Ahmed',
+                      'Mahmudul Hoque',
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
@@ -249,7 +163,7 @@ class Prosason extends StatelessWidget {
                     ),
                     SizedBox(height: 10,),
                     Text(
-                      'Admission Officer',
+                      'PS to Vice Chancellor',
                       style: TextStyle(
                         fontSize: 16.0,
                         fontWeight: FontWeight.normal,
@@ -260,136 +174,7 @@ class Prosason extends StatelessWidget {
                     ),
                     SizedBox(height: 2,),
                     Text(
-                      'rasel.ahmed.su@gmail.com',
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              color: kPrimaryColor,
-              padding: EdgeInsets.all(10.0),
-              child: Center(
-                child: Column(
-                  children: [
-                    Text(
-                      'Md.Quamruzzaman Bhuiyan (Zaman)',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 10,),
-                    Text(
-                      'Admission Officer',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 2,),
-                    Text(
-                      'zamansubd@gmail.com',
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              color: kPrimaryColor,
-              padding: EdgeInsets.all(10.0),
-              child: Center(
-                child: Column(
-                  children: [
-                    Text(
-                      'Md. Sujon Ahmed',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 10,),
-                    Text(
-                      'Admission Officer',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 2,),
-                    Text(
-                      'mdsujon.su@gmail.com',
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              color: kPrimaryColor,
-              padding: EdgeInsets.all(10.0),
-              child: Center(
-                child: Column(
-                  children: [
-                    Text(
-                      'Mohtasim Bin Latif (Nabil)',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 10,),
-                    Text(
-                      'Admission Officer',
-                      style: TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 2.0,
-                        color: Colors.white,
-                        fontFamily: 'IndieFlower',
-                      ),
-                    ),
-                    SizedBox(height: 2,),
-                    Text(
-                      'imrankhan3@gmail.com',
+                      'suvcoffice147@gmail.com',
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.normal,
@@ -453,6 +238,178 @@ class Prosason extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
+                      'Mohtasim Bin Latif (Nabil)',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 10,),
+                    Text(
+                      'Admission Officer',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 2,),
+                    Text(
+                      'imrankhan3@gmail.com',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              color: kPrimaryColor,
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'Mohammad Zakir Hossain',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 10,),
+                    Text(
+                      'Admission Officer',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 2,),
+                    Text(
+                      'zakir.su12@gmail.com',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              color: kPrimaryColor,
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'Md.Quamruzzaman Bhuiyan (Zaman)',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 10,),
+                    Text(
+                      'Admission Officer',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 2,),
+                    Text(
+                      'zamansubd@gmail.com',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              color: kPrimaryColor,
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'Rasel Ahmed',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 10,),
+                    Text(
+                      'Admission Officer',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 2,),
+                    Text(
+                      'rasel.ahmed.su@gmail.com',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              color: kPrimaryColor,
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                child: Column(
+                  children: [
+                    Text(
                       'Rifat Islam',
                       style: TextStyle(
                         fontSize: 20.0,
@@ -496,7 +453,7 @@ class Prosason extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Md. Fardoush Alam',
+                      'Md. Sujon Ahmed',
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
@@ -507,7 +464,7 @@ class Prosason extends StatelessWidget {
                     ),
                     SizedBox(height: 10,),
                     Text(
-                      'Assistant Executive',
+                      'Admission Officer',
                       style: TextStyle(
                         fontSize: 16.0,
                         fontWeight: FontWeight.normal,
@@ -518,7 +475,50 @@ class Prosason extends StatelessWidget {
                     ),
                     SizedBox(height: 2,),
                     Text(
-                      'ferdoushpak@gmail.com',
+                      'mdsujon.su@gmail.com',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+              color: kPrimaryColor,
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'Md.Zobayed Hossain',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 10,),
+                    Text(
+                      'APS to Vice Chancellor',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.normal,
+                        letterSpacing: 2.0,
+                        color: Colors.white,
+                        fontFamily: 'IndieFlower',
+                      ),
+                    ),
+                    SizedBox(height: 2,),
+                    Text(
+                      'apstovcoofice@gmail.com',
                       style: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.normal,
